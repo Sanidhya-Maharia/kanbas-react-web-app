@@ -41,9 +41,16 @@ export default function Lab1() {
                     <li>Flip and cook the other side.</li>
                     <li>Serve and enjoy!</li>
                 </ol>
-                My favorite recipe:
+                My favorite recipe, seasoned scrambled eggs:
                 <ol id="wd-your-favorite-recipe">
-                    {/* complete on your own */}
+                    <li>Crack 4 eggs in a container.</li>
+                    <li>Beat the eggs.</li>
+                    <li>Add seasoning.</li>
+                    <li>Heat a pan and add some butter to the pan.</li>
+                    <li>Add the egg mixture to the pan.</li>
+                    <li>Wait for the eggs to solidify a bit and then star stirring.</li>
+                    <li>Stop after a few minutes.</li>
+                    <li>Serve hot.</li>
                 </ol>
                 <h5>Unordered List Tag</h5>
                 My favorite books (in no particular order)
@@ -56,7 +63,9 @@ export default function Lab1() {
                 </ul>
                 Your favorite books (in no particular order)
                 <ul id="wd-your-books">
-                    {/* complete on your own */}
+                    <li>The Hitchhiker's Guide to the Galaxy</li>
+                    <li>The Hunger Games</li>
+                    <li>Divergent</li>
                 </ul>
             </div>
             <div id="wd-tables">
@@ -153,7 +162,7 @@ export default function Lab1() {
                 <br />
                 Loading a local image:
                 <br />
-                <img id="wd-teslabot" src="images/teslabot.jpg" height="200px" alt="teslabot_image" />
+                <img id="wd-teslabot" src="/logo192.png" height="200px" alt="teslabot_image" />
             </div>
             <div id="wd-forms">
                 <h4>Form Elements</h4>

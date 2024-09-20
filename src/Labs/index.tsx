@@ -7,8 +7,8 @@ import Lab3 from "./Lab3";
 export default function Labs() {
     return (
         <div id="wd-labs">
+            <h1>Sanidhya Maharia</h1>
             <h1>Labs</h1>
-            <h2>Sanidhya Maharia</h2>
             <TOC />
             <Routes>
                 <Route path="/" element={<Navigate to="Lab1" />} />
