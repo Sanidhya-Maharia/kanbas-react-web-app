@@ -33,7 +33,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Object oriented programming with Java
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>
@@ -48,7 +50,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Introduction to Machine Learning
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>
@@ -63,7 +67,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Learning concepts of data analysis and related software
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>
@@ -78,7 +84,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Working with large amounts of data
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>
@@ -93,7 +101,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Different software development methods and techniques
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>
@@ -108,7 +118,9 @@ export default function Dashboard() {
                 <p className="wd-dashboard-course-title card-text">
                   Concepts of operating systems
                 </p>
-                <button className="btn btn-primary">Go</button>
+                <a href="#/Kanbas/Courses/1234/Home">
+                  <button className="btn btn-primary">Go</button>
+                </a>
               </div>
             </div>
           </div>

@@ -14,6 +14,7 @@ export default function Assignments() {
             <BsGripVertical className="me-2 fs-3" />
             ASSIGNMENTS
             <AssignmentControlButtons />
+            <span className="float-end border boder-dark rounded p-1">40% of Total</span>
           </div>
           <ul className="wd-lessons list-group rounded-0">
             <li className="wd-lesson list-group-item p-3 ps-1">
