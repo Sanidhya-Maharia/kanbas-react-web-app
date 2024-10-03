@@ -5,7 +5,6 @@ import { LiaFileImportSolid } from "react-icons/lia";
 import { GrAnnounce } from "react-icons/gr";
 import { SiGoogleanalytics } from "react-icons/si";
 import { IoIosNotifications } from "react-icons/io";
-{/* Find more icons */ }
 export default function CourseStatus() {
   return (
     <div id="wd-course-status" style={{ width: "300px" }}>
