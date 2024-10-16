@@ -64,16 +64,16 @@ export default function AssignmentEditor() {
               <input id="wd-assign-to" value="Everyone" className="form-control mb-2" />
 
               <label htmlFor="wd-due-date"><b>Due</b></label><br />
-              <input type="date" id="wd-due-date" defaultValue={assignment.due} className="form-control mb-2" />
+              <input type="datetime-local" id="wd-due-date" defaultValue={assignment.due} className="form-control mb-2" />
 
               <div className="row">
                 <div className="col">
                   <label htmlFor="wd-available-from"><b>Available From</b></label>
-                  <input type="date" id="wd-available-from" defaultValue={assignment.unlock} className="form-control mb-2" />
+                  <input type="datetime-local" id="wd-available-from" defaultValue={assignment.unlock} className="form-control mb-2" />
                 </div>
                 <div className="col">
                   <label htmlFor="wd-available-until"><b>Until</b></label>
-                  <input type="date" id="wd-available-until" defaultValue={assignment.due} className="form-control mb-2" />
+                  <input type="datetime-local" id="wd-available-until" defaultValue={assignment.due} className="form-control mb-2" />
                 </div>
               </div>
             </div>

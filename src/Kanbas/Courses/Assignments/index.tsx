@@ -33,7 +33,7 @@ export default function Assignments() {
                   to={`./${assignment._id}`}>
                   {assignment.title}
                 </Link>
-                <p><text className="text-danger">Multiple Modules</text> | <b>Not Available until</b> {assignment.unlock} at 12:00am | <b>Due</b> {assignment.due} at 11:59pm | {assignment.points} pts</p>
+                <p><text className="text-danger">Multiple Modules</text> | <b>Not Available until</b> {assignment.unlock.split("T")[0]} at {assignment.unlock.split("T")[1]} | <b>Due</b> {assignment.due.split("T")[0]} at {assignment.due.split("T")[1]} | {assignment.points} pts</p>
               </div>
               <div className="position-absolute top-50 end-0 translate-middle-y">
                 <DescControlButtons />
