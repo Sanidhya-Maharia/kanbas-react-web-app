@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addEnrollment, deleteEnrollment } from "./Courses/People/reducer";
+import { addEnrollment, deleteEnrollment, setEnrollments } from "./Courses/People/reducer";
+import * as enrollmentClient from "./Courses/People/client";
 export default function Dashboard(
   { courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
@@ -14,7 +15,7 @@ export default function Dashboard(
   const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const dispatch = useDispatch();
   
-  /*const [enrollments, setEnrollments] = useState<any[]>([]);
+  //const [enrollments, setEnrollments] = useState<any[]>([]);
   const fetchEnrollments = async () => {
     let enrollments = [];
     try {
@@ -22,11 +23,11 @@ export default function Dashboard(
     } catch (error) {
       console.error(error);
     }
-    setEnrollments(enrollments);
+    dispatch(setEnrollments(enrollments));
   };
   useEffect(() => {
     fetchEnrollments();
-  }, [currentUser]);*/
+  }, [currentUser]);
 
   const [showAllCourses, setShowAllCourses] = useState(false);
 
@@ -88,7 +89,7 @@ export default function Dashboard(
 
       <div id="wd-dashboard-courses" className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <div className="wd-dashboard-course col" style={{ width: "300px" }}>
               <div className="card rounded-3 overflow-hidden">
 

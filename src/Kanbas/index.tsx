@@ -19,7 +19,8 @@ export default function Kanbas() {
   const fetchCourses = async () => {
     let courses = [];
     try {
-      courses = await userClient.findMyCourses();
+      //courses = await userClient.findMyCourses();
+      courses = await courseClient.fetchAllCourses();
     } catch (error) {
       console.error(error);
     }
