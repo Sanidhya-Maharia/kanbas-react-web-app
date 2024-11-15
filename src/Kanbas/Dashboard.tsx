@@ -14,7 +14,7 @@ export default function Dashboard(
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const dispatch = useDispatch();
-  
+
   //const [enrollments, setEnrollments] = useState<any[]>([]);
   const fetchEnrollments = async () => {
     let enrollments = [];
@@ -51,6 +51,26 @@ export default function Dashboard(
         enrollment.user === currentUser._id &&
         enrollment.course === courseId
     );
+  };
+
+  const removeEnrollment = async (enrollment: any) => {
+    await enrollmentClient.deleteEnrollment(enrollment._id);
+    dispatch(deleteEnrollment(enrollment));
+  }
+
+  const makeEnrollment = async (enrollment: any) => {
+    await enrollmentClient.createNewEnrollment(enrollment);
+    dispatch(addEnrollment(enrollment));
+  }
+
+  const getEnrollmentId = (userId: string, courseId: string): string | null => {
+    const enrollment = enrollments.find(
+      (enrollment: any) =>
+        enrollment.user === userId &&
+        enrollment.course === courseId
+    );
+
+    return enrollment ? enrollment._id : null;
   };
 
   return (
@@ -127,14 +147,14 @@ export default function Dashboard(
 
                   {currentUser.role === "STUDENT" && isEnrolled(course._id) && (
                     <button id="wd-unenroll" className="btn btn-danger me-2 float-end"
-                      onClick={() => dispatch(deleteEnrollment({ user: currentUser._id, course: course._id }))}>
+                      onClick={() => removeEnrollment({_id: getEnrollmentId(currentUser._id, course._id), user: currentUser._id, course: course._id })}>
                       Unenroll
                     </button>
                   )}
 
                   {currentUser.role === "STUDENT" && !isEnrolled(course._id) && (
                     <button id="wd-enroll" className="btn btn-success me-2 float-end"
-                      onClick={() => dispatch(addEnrollment({ user: currentUser._id, course: course._id }))}>
+                      onClick={() => makeEnrollment({ user: currentUser._id, course: course._id })}>
                       Enroll
                     </button>
                   )}
