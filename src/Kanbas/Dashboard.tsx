@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import * as db from "./Database";
 import { addEnrollment, deleteEnrollment } from "./Courses/People/reducer";
 export default function Dashboard(
   { courses, course, setCourse, addNewCourse,
@@ -14,6 +13,20 @@ export default function Dashboard(
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { enrollments } = useSelector((state: any) => state.enrollmentReducer);
   const dispatch = useDispatch();
+  
+  /*const [enrollments, setEnrollments] = useState<any[]>([]);
+  const fetchEnrollments = async () => {
+    let enrollments = [];
+    try {
+      enrollments = await enrollmentClient.fetchAllEnrollments();
+    } catch (error) {
+      console.error(error);
+    }
+    setEnrollments(enrollments);
+  };
+  useEffect(() => {
+    fetchEnrollments();
+  }, [currentUser]);*/
 
   const [showAllCourses, setShowAllCourses] = useState(false);
 
@@ -75,7 +88,7 @@ export default function Dashboard(
 
       <div id="wd-dashboard-courses" className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {filteredCourses.map((course) => (
+          {courses.map((course) => (
             <div className="wd-dashboard-course col" style={{ width: "300px" }}>
               <div className="card rounded-3 overflow-hidden">
 
