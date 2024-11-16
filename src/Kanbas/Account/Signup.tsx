@@ -4,7 +4,9 @@ import * as client from "./client";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./reducer";
 export default function Signup() {
-  const [user, setUser] = useState<any>({});
+  const [user, setUser] = useState<any>({
+    role: "STUDENT",
+  });
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const signup = async () => {
