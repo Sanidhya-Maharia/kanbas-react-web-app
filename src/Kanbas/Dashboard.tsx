@@ -65,13 +65,13 @@ export default function Dashboard(
                     {course.name} </h5>
                   <p className="wd-dashboard-course-title card-text overflow-y-hidden" style={{ maxHeight: 100 }}>
                     {course.description} </p>
+                  <Link to={`/Kanbas/Courses/${course._id}/Home`}
+                    className="wd-dashboard-course-link text-decoration-none text-dark" >
+                    <button className="btn btn-primary"> Go </button>
+                  </Link>
 
                   {currentUser.role === "FACULTY" && (
                     <>
-                      <Link to={`/Kanbas/Courses/${course._id}/Home`}
-                        className="wd-dashboard-course-link text-decoration-none text-dark" >
-                        <button className="btn btn-primary"> Go </button>
-                      </Link>
                       <button onClick={(event) => {
                         event.preventDefault();
                         deleteCourse(course._id);
