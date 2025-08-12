@@ -67,7 +67,7 @@ export default function Dashboard(
                     {course.description} </p>
                   <Link to={`/Kanbas/Courses/${course._id}/Home`}
                     className="wd-dashboard-course-link text-decoration-none text-dark" >
-                    <button className="btn btn-primary"> Go </button>
+                    {!enrolling && (<button className="btn btn-primary"> Go </button>)}
                   </Link>
 
                   {currentUser.role === "FACULTY" && (
